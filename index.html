@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Chart.js Example</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h2>My First Chart.js Graph</h2>
+  <canvas id="myChart" width="400" height="200"></canvas>
+
+  <script>
+    const ctx = document.getElementById('myChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: 'Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: [
+            'red', 'blue', 'yellow', 'green', 'purple', 'orange'
+          ]
+        }]
+      }
+    });
+  </script>
+</body>
+</html>
